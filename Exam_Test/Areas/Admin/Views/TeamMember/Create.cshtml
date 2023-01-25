@@ -1,0 +1,40 @@
+﻿@using Business.ViewModels.TeamMember
+@model CreateTeamMemberVM
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card-body" style="width:1000px">
+    <h4 class="card-title">Default form</h4>
+    <p class="card-description">
+        Basic form layout
+    </p>
+    <form class="forms-sample" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="exampleInputUsername1">Name</label>
+            <input asp-for="Name" class="form-control" id="exampleInputUsername1" placeholder="Username">
+        </div>
+        <span asp-validation-for="Name"></span>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Position</label>
+            <input asp-for="Position" class="form-control" id="exampleInputEmail1" placeholder="Email">
+        </div>
+        <span asp-validation-for="Position"></span>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Image</label>
+            <input asp-for="Image" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <span asp-validation-for="Image"></span>
+       
+        <div class="form-check form-check-flat form-check-primary">
+            <label class="form-check-label">
+                <input type="checkbox" class="form-check-input">
+                Remember me
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+        <button class="btn btn-light">Cancel</button>
+    </form>
+</div>
+
